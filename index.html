@@ -29,17 +29,21 @@
 
   <body>
     <!-- navbar -->
-    <div class="nav">
+    <nav class="nav">
       <div class="container">
         <h1>Mealify<span class="h1-dot">.</span></h1>
-        <div class="menue-list">
-          <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Chef</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contant</a></li>
-          </ul>
-        </div>
+
+        <label for="bar" id="check-label">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" id="bar" />
+
+        <ul>
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#chef">Chef</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#book">Contant</a></li>
+        </ul>
         <div class="dark-icon">
           <input type="checkbox" id="darkMode" />
           <label for="darkMode">
@@ -48,10 +52,10 @@
           </label>
         </div>
       </div>
-    </div>
+    </nav>
 
     <!-- main-section -->
-    <div class="header">
+    <div class="header" id="home">
       <div class="container">
         <div class="header-image">
           <img src="images/hero-img.png" alt="" />
@@ -78,7 +82,7 @@
       </div>
     </div>
     <!-- chefs-section -->
-    <div class="chef-section">
+    <div class="chef-section" id="chef">
       <div class="title">
         <h2>chefs</h2>
         <p>Our <span class="pro">Proffesional</span> Chefs</p>
@@ -183,7 +187,7 @@
     </div>
 
     <!-- gallery -->
-    <div class="gallery-section">
+    <div class="gallery-section" id="gallery">
       <div class="container">
         <div class="title">
           <h2>GALLERY</h2>

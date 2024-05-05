@@ -62,7 +62,7 @@ a {
 }
 ul {
   list-style: none;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -97,6 +97,7 @@ img {
 }
 .nav .container {
   margin: 0 auto;
+  justify-content: space-between;
 }
 .h1-dot {
   color: var(--color-primary);
@@ -151,6 +152,19 @@ img {
   position: absolute;
 }
 
+.nav #bar {
+  display: none;
+}
+.nav #check-label {
+  display: none;
+}
+.nav .bar-media label {
+  margin-left: auto;
+  cursor: pointer;
+}
+.nav label .fa-bars {
+  font-size: 25px;
+}
 /*main seaction style*/
 .header {
   background-color: var(--color-light-gray);
@@ -692,6 +706,37 @@ form .btn-send:hover {
   }
 }
 @media screen and (max-width: 746px) {
+  .nav {
+    #check-label {
+      display: block;
+    }
+    ul,
+    .dark-icon {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background-color: var(--color-light);
+      padding: 10px 0 20px;
+      transition: all 0.3s;
+      max-height: 0;
+      opacity: 0;
+    }
+    ul li {
+      padding: 10px 0;
+    }
+    .dark-icon {
+      top: 300%;
+      left: -20px;
+    }
+    #bar:checked ~ ul,
+    #bar:checked ~ .dark-icon {
+      max-height: 600px;
+      opacity: 1;
+    }
+  }
   .gallery-image {
     flex-direction: column;
     gap: 10px;
@@ -706,7 +751,6 @@ form .btn-send:hover {
 }
 @media screen and (max-width: 669px) {
   .container {
-    width: 100%;
     margin: 40px;
   }
   .chef-section .container .chef-card {
